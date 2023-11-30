@@ -55,32 +55,32 @@ sleep 2
 
 server1()
 {
- ./shade -b "127.0.0.1:1081" -s "139.162.217.208:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
+ ./shade -b "127.0.0.1:1081" -s "139.162.225.119:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
 }
 
 server2()
 {
- ./shade -b "127.0.0.1:1081" -s "139.162.217.227:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
+ ./shade -b "127.0.0.1:1081" -s "178.79.141.123:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
 }
 
 server3()
 {
- ./shade -b "127.0.0.1:1081" -s "139.162.217.54:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
+ ./shade -b "127.0.0.1:1081" -s "176.58.112.72:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
 }
 
 server4()
 {
- ./shade -b "127.0.0.1:1081" -s "139.162.202.241:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
+ ./shade -b "127.0.0.1:1081" -s "178.79.142.26:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
 }
 
 server5()
 {
- ./shade -b "127.0.0.1:1081" -s "139.162.202.10:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
+ ./shade -b "127.0.0.1:1081" -s "176.58.103.150:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
 }
 
 server6()
 {
- ./shade -b "127.0.0.1:1081" -s "139.162.202.16:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
+ ./shade -b "127.0.0.1:1081" -s "88.80.191.78:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
 }
 
 temp=""
